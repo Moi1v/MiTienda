@@ -9,21 +9,21 @@ namespace MiTienda
 
         private void BtnIngresar_Click(object sender, EventArgs e)
         {
-            
+
             string usuario = textBox1.Text;
             string contrasena = textBox2.Text;
 
-           
-            string usuarioValido = "usuarioEjemplo"; 
-            string contrasenaValida = "contrasenaEjemplo"; 
 
-          
+            string usuarioValido = "usuarioEjemplo";
+            string contrasenaValida = "contrasenaEjemplo";
+
+
             if (usuario == usuarioValido && contrasena == contrasenaValida)
             {
 
                 Menu designedForm = new Menu();
                 designedForm.Show();
-                
+
                 textBox1.Clear();
                 textBox2.Clear();
 
@@ -40,7 +40,17 @@ namespace MiTienda
 
         private void BtnSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit(); 
+            Application.Exit();
+        }
+
+        private void log_in_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
