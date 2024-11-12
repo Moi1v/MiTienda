@@ -1,5 +1,6 @@
 namespace MiTienda
 {
+    //Prueba
     public partial class log_in : Form
     {
         public log_in()
