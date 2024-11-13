@@ -17,28 +17,14 @@ namespace MiTienda
             InitializeComponent();
 
             // Configurar cadena de conexión
-            string connectionString = "Server=uspg.database.windows.net;Database=jhernandez_db;User Id=jhernandez;Password=g&ouJ1szsLZ6rJLt;";
+            string connectionString = "Server=uspg.database.windows.net;Database=winforms-pos;User Id=jhernandez;Password=g&ouJ1szsLZ6rJLt;";
             _connection = new AzureSqlConnection(connectionString);
 
         }
 
         private void BtnIngresar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                // Abrir la conexión
-                _connection.OpenConnection();
-                MessageBox.Show("Conexión establecida exitosamente.");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al conectar: {ex.Message}");
-            }
-            finally
-            {
-                // Cerrar la conexión
-                _connection.CloseConnection();
-            }
+           
             try
             {
                 // Abrir la conexión
