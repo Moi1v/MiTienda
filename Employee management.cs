@@ -31,17 +31,17 @@ namespace MiTienda
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string codigo = textBox1.Text;  
-            string nombre = textBox2.Text;   
+            string codigo = textBox1.Text;
+            string nombre = textBox2.Text;
 
             var employee = ObtenerEmpleado(codigo, nombre);
 
             if (employee != null)
             {
-            
+
                 lblTiempo.Text = $"Tiempo en la tienda: {CalcularTiempoEmpleo(employee.FechaIngreso).Days / 365} años";
 
-             
+
                 double totalVentas = CalcularTotalVentas(employee.Id);
                 Sales.Text = $"Las ventas Totales son: ${totalVentas}";
             }
@@ -53,12 +53,12 @@ namespace MiTienda
 
         private Empleado ObtenerEmpleado(string codigo, string nombre)
         {
-          
+
             if (codigo == "123" || nombre.Equals("Juan Pérez", StringComparison.OrdinalIgnoreCase))
             {
                 return new Empleado { Id = "123", Nombre = "Juan Pérez", FechaIngreso = new DateTime(2019, 5, 10) };
             }
-            return null; 
+            return null;
         }
 
         private TimeSpan CalcularTiempoEmpleo(DateTime fechaIngreso)
@@ -68,14 +68,14 @@ namespace MiTienda
 
         private double CalcularTotalVentas(string employeeId)
         {
-         
+
             var ventas = new[]
             {
             new { Fecha = "2023-11-01", Monto = 250.00 },
             new { Fecha = "2023-11-02", Monto = 100.00 }
         };
 
-          
+
             return ventas.Sum(venta => venta.Monto);
         }
 
@@ -84,6 +84,13 @@ namespace MiTienda
             public string Id { get; set; }
             public string Nombre { get; set; }
             public DateTime FechaIngreso { get; set; }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Menu designedForm = new Menu();
+            designedForm.Show();
+            this.Hide();
         }
     }
 }

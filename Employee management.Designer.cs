@@ -39,23 +39,24 @@
             button1 = new Button();
             button2 = new Button();
             btnSearch = new Button();
-            lblTiempo = new Label();
-            Sales = new Label();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(31, 48);
+            label1.Location = new Point(77, 101);
             label1.Name = "label1";
-            label1.Size = new Size(117, 17);
+            label1.Size = new Size(121, 17);
             label1.TabIndex = 0;
-            label1.Text = "Codigo Empleado";
+            label1.Text = "Codigo Empleado:";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(160, 44);
+            textBox1.Location = new Point(206, 95);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(181, 23);
             textBox1.TabIndex = 1;
@@ -64,15 +65,15 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(32, 83);
+            label2.Location = new Point(77, 149);
             label2.Name = "label2";
-            label2.Size = new Size(58, 17);
+            label2.Size = new Size(127, 17);
             label2.TabIndex = 2;
-            label2.Text = "Nombre";
+            label2.Text = "Nombre Empleado:";
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(160, 81);
+            textBox2.Location = new Point(206, 143);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(181, 23);
             textBox2.TabIndex = 3;
@@ -81,7 +82,7 @@
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Enero", "Febrero", "Marzo", "Abril", "Julio", "Junio", "Agosto", "Octubre", "Septiembre", "Noviembre", "Diciembre" });
-            comboBox1.Location = new Point(160, 12);
+            comboBox1.Location = new Point(206, 44);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(181, 23);
             comboBox1.TabIndex = 4;
@@ -91,17 +92,17 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(32, 17);
+            label3.Location = new Point(77, 50);
             label3.Name = "label3";
-            label3.Size = new Size(33, 17);
+            label3.Size = new Size(37, 17);
             label3.TabIndex = 5;
-            label3.Text = "Mes";
+            label3.Text = "Mes:";
             // 
             // BTNReturn
             // 
-            BTNReturn.Location = new Point(89, 214);
+            BTNReturn.Location = new Point(665, 468);
             BTNReturn.Name = "BTNReturn";
-            BTNReturn.Size = new Size(177, 38);
+            BTNReturn.Size = new Size(123, 38);
             BTNReturn.TabIndex = 6;
             BTNReturn.Text = "Return";
             BTNReturn.UseVisualStyleBackColor = true;
@@ -127,39 +128,40 @@
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(272, 214);
+            btnSearch.Location = new Point(536, 468);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(177, 38);
+            btnSearch.Size = new Size(123, 38);
             btnSearch.TabIndex = 9;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = true;
             btnSearch.Click += btnSearch_Click;
             // 
-            // lblTiempo
+            // flowLayoutPanel1
             // 
-            lblTiempo.AutoSize = true;
-            lblTiempo.Location = new Point(533, 12);
-            lblTiempo.Name = "lblTiempo";
-            lblTiempo.Size = new Size(36, 15);
-            lblTiempo.TabIndex = 10;
-            lblTiempo.Text = "Time:";
+            flowLayoutPanel1.BackColor = SystemColors.ButtonShadow;
+            flowLayoutPanel1.Location = new Point(393, 42);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(395, 420);
+            flowLayoutPanel1.TabIndex = 10;
             // 
-            // Sales
+            // pictureBox1
             // 
-            Sales.AutoSize = true;
-            Sales.Location = new Point(533, 52);
-            Sales.Name = "Sales";
-            Sales.Size = new Size(36, 15);
-            Sales.TabIndex = 11;
-            Sales.Text = "Sales:";
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(760, 6);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(28, 30);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 11;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // Employee_management
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(Sales);
-            Controls.Add(lblTiempo);
+            ClientSize = new Size(800, 533);
+            Controls.Add(pictureBox1);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(btnSearch);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -173,6 +175,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Employee_management";
             Text = "Employee management";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -189,7 +192,7 @@
         private Button button1;
         private Button button2;
         private Button btnSearch;
-        private Label lblTiempo;
-        private Label Sales;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private PictureBox pictureBox1;
     }
 }

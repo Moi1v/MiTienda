@@ -42,14 +42,13 @@ namespace MiTienda
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-
+            Facturacioncs formsfacturas = new Facturacioncs();
+            formsfacturas.Show();
+            this.Hide();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Form5Facturacioncs formsfacturas = new Form5Facturacioncs();
-            formsfacturas.Show();
-            this.Hide();
         }
     }
 }

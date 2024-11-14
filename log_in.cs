@@ -2,6 +2,7 @@ using System;
 using System.Data;
 using System.Windows.Forms;
 using ConexionSQLAzure;
+using Microsoft.Data.SqlClient;
 
 
 namespace MiTienda
@@ -19,8 +20,7 @@ namespace MiTienda
             // Configurar cadena de conexión
             string connectionString = "Server=uspg.database.windows.net;Database=winforms-pos;User Id=jhernandez;Password=g&ouJ1szsLZ6rJLt;";
             _connection = new AzureSqlConnection(connectionString);
-
-        }
+        } 
 
         private void BtnIngresar_Click(object sender, EventArgs e)
         {
@@ -86,3 +86,4 @@ namespace MiTienda
         }
     }
 }
+

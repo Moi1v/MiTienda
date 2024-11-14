@@ -186,7 +186,7 @@
             Controls.Add(label1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form4";
-            Text = "Form4";
+            Text = "Product Maintenance";
             ResumeLayout(false);
             PerformLayout();
         }
