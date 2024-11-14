@@ -153,7 +153,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 11;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += PictureBox1_Click;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // Employee_management
             // 
