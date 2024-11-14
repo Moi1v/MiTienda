@@ -56,7 +56,7 @@ namespace MiTienda
           
             if (codigo == "123" || nombre.Equals("Juan Pérez", StringComparison.OrdinalIgnoreCase))
             {
-                return new Empleado { Id = "123", Nombre = "Juan Pérez",, FechaIngreso = new DateTime(2019, 5, 10) };
+                return new Empleado { Id = "123", Nombre = "Juan Pérez", FechaIngreso = new DateTime(2019, 5, 10) };
             }
             return null; 
         }

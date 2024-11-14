@@ -39,5 +39,17 @@ namespace MiTienda
             designedForm.Show();
             this.Hide();
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Form5Facturacioncs formsfacturas = new Form5Facturacioncs();
+            formsfacturas.Show();
+            this.Hide();
+        }
     }
 }

@@ -93,11 +93,13 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(180, 23);
             textBox1.TabIndex = 5;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
             textBox2.Location = new Point(136, 251);
             textBox2.Name = "textBox2";
+            textBox2.PasswordChar = '*';
             textBox2.Size = new Size(180, 23);
             textBox2.TabIndex = 6;
             // 
@@ -116,6 +118,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "log_in";
             Text = "log in";
+            Load += log_in_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
