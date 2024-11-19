@@ -25,7 +25,7 @@ namespace MiTienda
 
         private void Form3_Load(object sender, EventArgs e)
         {
-
+            //EY MUY BUENAS GUAPISIMOS AQUI VEGETTA 777 EN UN GAMEPLAY VIDIRECTO DE MUNDO VEGETTA :)
         }
     }
 }
